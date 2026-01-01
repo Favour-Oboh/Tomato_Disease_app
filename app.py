@@ -26,7 +26,7 @@ device = torch.device("cpu")
 model = EfficientNet().to(device)
 
 model.load_state_dict(
-    torch.load("EfficientNetB3.pt", map_location=device)
+    torch.load("https://github.com/Favour-Oboh/Tomato_Disease_app/blob/main/EfficientNetB3.pt", map_location=device)
 )
 model.eval()
 
