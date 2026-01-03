@@ -97,7 +97,14 @@ class EfficientNet(nn.Module):
 
 device = torch.device("cpu")
 model = EfficientNet().to(device)
+<<<<<<< HEAD
 model.load_state_dict(torch.load("EfficientNetB3.pt", map_location=device))
+=======
+
+model.load_state_dict(
+    torch.load("EfficientNetB3.pt", map_location=device, weights_only = True)
+)
+>>>>>>> 440ab697f8f8af3d9b7b5875318bae0a17794bd5
 model.eval()
 
 classnames = [
