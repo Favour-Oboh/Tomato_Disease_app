@@ -26,7 +26,7 @@ device = torch.device("cpu")
 model = EfficientNet().to(device)
 
 model.load_state_dict(
-    torch.load("EfficientNetB3.pt", map_location=device)
+    torch.load("EfficientNetB3.pt", map_location=device, weights_only = True)
 )
 model.eval()
 
